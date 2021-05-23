@@ -24,7 +24,7 @@ $(function () {
         ],
 
         // 验证确认密码
-        repwd: function (value, time) {
+        repwd: function (value, item) {
             //`value 使用此规则的表单项的值（确认密码框的值）
             // item 使用此规则的表单项元素对象
 
