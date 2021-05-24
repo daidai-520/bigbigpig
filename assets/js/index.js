@@ -36,7 +36,7 @@ function getUserInfo() {
             }
             // 渲染用户
             renderAvatar(res.data);
-            console.log(1);
+            // console.log(1);
         },
         /*  complete: function (res) {
              console.log(res);
