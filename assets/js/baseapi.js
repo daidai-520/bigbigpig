@@ -18,9 +18,9 @@ $.ajaxPrefilter(function (options) {
         if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
             localStorage.removeItem('token');
             if (window.parent) {
-                window.parent.location.href = 'login.html';
+                window.parent.location.href = '/login.html';
             } else {
-                location.href = 'login.html';
+                location.href = '/login.html';
             }
            
             

@@ -14,10 +14,10 @@
 <body>
     <!-- 卡片区域 -->
     <div class="layui-card">
-        <div class="layui-card-header">写文章</div>
+        <div class="layui-card-header">编辑文章</div>
         <div class="layui-card-body">
             <!-- 发布文章的表单 -->
-            <form class="layui-form" id="form-pub">
+            <form class="layui-form" id="form-adit" lay-filter="form-edit">
                 <div class="layui-form-item">
                     <label class="layui-form-label">文章标题</label>
                     <div class="layui-input-block">
@@ -68,9 +68,17 @@
                 </div>
                 <!-- 第五行 -->
                 <div class="layui-form-item">
+                    <!-- 左侧 label -->
+                    <label class="layui-form-label">文章状态</label>
                     <div class="layui-input-block">
-                        <button class="layui-btn" lay-submit>发布</button>
-                        <button class="layui-btn layui-btn-primary" lay-submit id="btnSave2">存为草稿</button>
+                        <input type="radio" name="state" value="已发布" title="草稿">
+                        <input type="radio" name="state" value="草稿" title="已发布">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit>确认修改</button>
+                        
                     </div>
                 </div>
             </form>
@@ -78,7 +86,7 @@
     </div>
 
     <!-- x下拉列表模板 -->
-    <script type="text/html" id="tpl-cate">
+    <script type="text/html" id="tpl">
             <option value="">请选择文章分类</option>
             {{each data}}
             <option value="{{$value.Id}}">{{$value.name}}</option>
@@ -89,7 +97,7 @@
     <script src="../assets/lib/template-web.js"></script>
 
     <script src="/assets/lib/layui/layui.all.js"></script>
-    
+
     <script src="/assets/lib/jquery.js"></script>
 
     <!-- 导入富文本js -->
@@ -101,9 +109,9 @@
     <script src="../assets/lib/cropper/jquery-cropper.js"></script>
 
 
-    
+
     <script src="../assets/js/baseapi.js"></script>
-    <script src="../assets/js/acticle/art-pub.js"></script>
+    <script src="../assets/js/acticle/art-edit.js"></script>
 
 
 
